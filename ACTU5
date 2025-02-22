@@ -1,1 +1,47 @@
+<!-- Ejercicio 1: Frames para Roperitos S.A. de C.V. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Roperitos - Frames</title>
+</head>
+<frameset rows="20%, 80%">
+    <frame src="menu.html" name="menuFrame">
+    <frame src="contenido.html" name="contentFrame">
+</frameset>
+</html>
+
+<!-- menu.html -->
+<!DOCTYPE html>
+<html>
+<body>
+    <a href="pagina1.html" target="contentFrame">Página 1</a> |
+    <a href="pagina2.html" target="contentFrame">Página 2</a> |
+    <a href="pagina3.html" target="contentFrame">Página 3</a>
+</body>
+</html>
+
+<!-- Ejercicio 2: Iframe para Keyboard S.A. de C.V. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keyboard - Iframe</title>
+</head>
+<body>
+    <h2>Contenido con Iframe</h2>
+    <iframe src="https://www.ejemplo.com" width="600" height="400"></iframe>
+</body>
+</html>
+
+<!-- Ejercicio 3: Frameset para Buttons S.A. de C.V. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buttons - Frameset</title>
+</head>
+<frameset cols="20%, 60%, 20%">
+    <frame src="navegacion.html" name="navFrame">
+    <frame src="contenido.html" name="contentFrame">
+    <frame src="publicidad.html" name="adFrame">
+</frameset>
+</html>
 
