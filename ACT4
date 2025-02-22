@@ -1,0 +1,79 @@
+<!-- Formulario de registro - Cubitos S.A. -->
+<form>
+    <label>Nombre de usuario: <input type="text" name="username" required></label><br>
+    <label>Contraseña: <input type="password" name="password" required></label><br>
+    <label>Email: <input type="email" name="email" required></label><br>
+    <label>Fecha de nacimiento: <input type="date" name="birthdate" required></label><br>
+    <button type="submit">Registrarse</button>
+</form>
+
+<!-- Formulario de opinión - Rubrick S.A. -->
+<form>
+    <label>¿Cuál es su interés? <input type="text" name="interest"></label><br>
+    <label>¿Cuál es su opinión? <textarea name="opinion"></textarea></label><br>
+    <label>¿Cuál es su experiencia? <textarea name="experience"></textarea></label><br>
+    <button type="submit">Enviar</button>
+</form>
+
+<!-- Formulario de contacto - Woods S.A. -->
+<form>
+    <label>Nombre: <input type="text" name="name" required></label><br>
+    <label>Email: <input type="email" name="email" required></label><br>
+    <label>Mensaje: <textarea name="message" required></textarea></label><br>
+    <button type="submit">Enviar</button>
+</form>
+
+<!-- Formulario de cotizaciones - Backpacks S.A. -->
+<form>
+    <label>Nombre: <input type="text" name="name" required></label><br>
+    <label>Email: <input type="email" name="email" required></label><br>
+    <label>Teléfono: <input type="tel" name="phone"></label><br>
+    <label>Detalles del producto/servicio: <textarea name="details"></textarea></label><br>
+    <button type="submit">Solicitar cotización</button>
+</form>
+
+<!-- Formulario de comentarios - Formas S.A. -->
+<form>
+    <label>Nombre: <input type="text" name="name" required></label><br>
+    <label>Email: <input type="email" name="email" required></label><br>
+    <label>Comentario: <textarea name="comment" required></textarea></label><br>
+    <button type="submit">Comentar</button>
+</form>
+
+<!-- Formulario de inicio de sesión - Chuchas S.A. -->
+<form>
+    <label>Nombre de usuario: <input type="text" name="username" required></label><br>
+    <label>Contraseña: <input type="password" name="password" required></label><br>
+    <button type="submit">Iniciar sesión</button>
+</form>
+
+<!-- Formulario de búsqueda - Finder S.A. -->
+<form>
+    <label>Buscar: <input type="text" name="search" placeholder="Palabra clave o frase" required></label>
+    <button type="submit">Buscar</button>
+</form>
+
+<!-- Formulario de suscripción - Suscription S.A. -->
+<form>
+    <label>Nombre: <input type="text" name="name" required></label><br>
+    <label>Email: <input type="email" name="email" required></label><br>
+    <label>Preferencia de suscripción: 
+        <select name="preference">
+            <option value="diario">Diario</option>
+            <option value="semanal">Semanal</option>
+            <option value="mensual">Mensual</option>
+        </select>
+    </label><br>
+    <button type="submit">Suscribirse</button>
+</form>
+
+<!-- Formulario de reserva - Research S.A. -->
+<form>
+    <label>Nombre: <input type="text" name="name" required></label><br>
+    <label>Email: <input type="email" name="email" required></label><br>
+    <label>Teléfono: <input type="tel" name="phone"></label><br>
+    <label>Fecha de reserva: <input type="date" name="date" required></label><br>
+    <label>Hora de reserva: <input type="time" name="time" required></label><br>
+    <label>Número de personas: <input type="number" name="people" min="1" required></label><br>
+    <button type="submit">Reservar</button>
+</form>
