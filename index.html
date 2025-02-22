@@ -26,6 +26,12 @@
         a:hover {
             text-decoration: underline;
         }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
     </style>
 </head>
 <body>
@@ -33,9 +39,10 @@
     <input type="text" id="repo" placeholder="Usuario/Repositorio" value="octocat/Hello-World">
     <button onclick="loadRepo()">Cargar</button>
     <ul id="file-list"></ul>
+    <div id="file-content"></div>
     
     <script>
-        async function loadRepo(path = '') {
+        async function loadRepo(path = 'main') {
             const repo = document.getElementById('repo').value;
             const url = `https://api.github.com/repos/${repo}/contents/${path}`;
             const response = await fetch(url);
@@ -49,16 +56,28 @@
             data.forEach(item => {
                 const li = document.createElement('li');
                 const link = document.createElement('a');
-                link.href = item.html_url;
+                link.href = '#';
                 link.textContent = item.name;
                 if (item.type === 'dir') {
-                    link.href = '#';
                     link.onclick = () => { loadRepo(item.path); return false; };
+                } else {
+                    link.onclick = () => { loadFile(item.download_url); return false; };
                 }
                 li.appendChild(link);
                 fileList.appendChild(li);
             });
         }
+
+        async function loadFile(url) {
+            const response = await fetch(url);
+            if (!response.ok) {
+                document.getElementById('file-content').innerHTML = '<p>Error al cargar el archivo.</p>';
+                return;
+            }
+            const text = await response.text();
+            document.getElementById('file-content').innerHTML = `<pre>${text}</pre>`;
+        }
     </script>
 </body>
 </html>
+
