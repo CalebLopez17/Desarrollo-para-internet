@@ -1,0 +1,36 @@
+// 1. Alerta "Hola mundo" al cargar la página
+window.onload = function() {
+    alert("Hola mundo");
+};
+
+// 2. Cambiar el contenido de un elemento con ID "mensaje"
+function cambiarTexto() {
+    document.getElementById("mensaje").innerText = "¡Hola!";
+}
+
+// 3. Validar formulario (evitar campos vacíos)
+function validarFormulario() {
+    let inputs = document.querySelectorAll("input");
+    for (let input of inputs) {
+        if (input.value.trim() === "") {
+            alert("Todos los campos deben estar llenos");
+            return false;
+        }
+    }
+    return true;
+}
+
+// 4. Función que suma dos números y retorna el resultado
+function sumar(a, b) {
+    return a + b;
+}
+
+// 5. Cambiar color de fondo al hacer clic en un botón
+function cambiarColor() {
+    document.body.style.backgroundColor = "lightblue";
+}
+
+// 6. Generar un número aleatorio entre 1 y 100
+function numeroAleatorio() {
+    return Math.floor(Math.random() * 100) + 1;
+}
