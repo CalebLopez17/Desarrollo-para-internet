@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación del DOM</title>
+    <style>
+        #elementoA ocultar {
+            display: block;
+            padding: 10px;
+            background-color: lightblue;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicios de Manipulación del DOM</h1>
+    
+    <!-- Añadir un nodo hijo -->
+    <div id="contenedor">
+        <p>Este es un párrafo inicial.</p>
+    </div>
+    <button onclick="agregarNodo()">Añadir Nodo</button>
+    
+    <!-- Eliminar un nodo hijo -->
+    <div id="eliminarContenedor">
+        <p id="parrafoEliminar">Este es un párrafo que será eliminado.</p>
+    </div>
+    <button onclick="eliminarNodo()">Eliminar Nodo</button>
+    
+    <!-- Cambiar contenido de un nodo -->
+    <p id="texto">Texto original</p>
+    <button onclick="cambiarContenido()">Cambiar Contenido</button>
+    
+    <!-- Ocultar elemento -->
+    <div id="elementoAocultar">Elemento a ocultar</div>
+    <button onclick="ocultarElemento()">Ocultar Elemento</button>
+    
+    <!-- Mostrar elemento -->
+    <div id="elementoAMostrar" style="display:none;">Elemento oculto</div>
+    <button onclick="mostrarElemento()">Mostrar Elemento</button>
+    
+    <!-- Cambiar atributo de un elemento -->
+    <img id="imagen" src="imagen1.jpg" alt="Imagen inicial" width="100">
+    <button onclick="cambiarAtributo()">Cambiar Imagen</button>
+    
+    <script>
+        function agregarNodo() {
+            let nuevoParrafo = document.createElement("p");
+            nuevoParrafo.textContent = "Este es un nuevo párrafo agregado dinámicamente.";
+            document.getElementById("contenedor").appendChild(nuevoParrafo);
+        }
+        
+        function eliminarNodo() {
+            let nodo = document.getElementById("parrafoEliminar");
+            if (nodo) nodo.remove();
+        }
+        
+        function cambiarContenido() {
+            document.getElementById("texto").innerHTML = "Nuevo contenido actualizado.";
+        }
+        
+        function ocultarElemento() {
+            document.getElementById("elementoAocultar").style.display = "none";
+        }
+        
+        function mostrarElemento() {
+            document.getElementById("elementoAMostrar").style.display = "block";
+        }
+        
+        function cambiarAtributo() {
+            document.getElementById("imagen").setAttribute("src", "imagen2.jpg");
+        }
+    </script>
+</body>
+</html>
