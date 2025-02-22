@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones con JavaScript</title>
+    <style>
+        body { text-align: center; }
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Animaciones con JavaScript</h1>
+    <button onclick="mover('left')">Izquierda</button>
+    <button onclick="mover('right')">Derecha</button>
+    <button onclick="mover('up')">Arriba</button>
+    <button onclick="mover('down')">Abajo</button>
+    <button onclick="cambiarTamanio()">Cambiar Tamaño</button>
+    <button onclick="cambiarColor()">Cambiar Color</button>
+    <button onclick="cambiarOpacidad()">Cambiar Opacidad</button>
+    <button onclick="desvanecer()">Desvanecer</button>
+    <button onclick="rebotar()">Rebote</button>
+    
+    <div class="box" id="box"></div>
+    
+    <script>
+        let box = document.getElementById("box");
+        let positionX = 50, positionY = 50;
+
+        function mover(direccion) {
+            if (direccion === "left") positionX -= 20;
+            if (direccion === "right") positionX += 20;
+            if (direccion === "up") positionY -= 20;
+            if (direccion === "down") positionY += 20;
+            box.style.left = positionX + "px";
+            box.style.top = positionY + "px";
+        }
+
+        function cambiarTamanio() {
+            let size = Math.random() * 100 + 50;
+            box.style.width = size + "px";
+            box.style.height = size + "px";
+        }
+
+        function cambiarColor() {
+            box.style.backgroundColor = `rgb(${Math.random()*255}, ${Math.random()*255}, ${Math.random()*255})`;
+        }
+
+        function cambiarOpacidad() {
+            let opacity = Math.random();
+            box.style.opacity = opacity;
+        }
+
+        function desvanecer() {
+            let opacity = 1;
+            let fade = setInterval(() => {
+                if (opacity <= 0) {
+                    clearInterval(fade);
+                } else {
+                    opacity -= 0.05;
+                    box.style.opacity = opacity;
+                }
+            }, 50);
+        }
+
+        function rebotar() {
+            let velocity = 5;
+            let direction = 1;
+            let position = 50;
+            let interval = setInterval(() => {
+                if (position >= window.innerWidth - 60 || position <= 0) {
+                    direction *= -1;
+                }
+                position += velocity * direction;
+                box.style.left = position + "px";
+            }, 10);
+        }
+    </script>
+</body>
+</html>
