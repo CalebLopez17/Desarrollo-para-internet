@@ -10,36 +10,58 @@
             max-width: 800px;
             margin: auto;
             padding: 20px;
+            text-align: center;
         }
-        ul {
-            list-style: none;
-            padding: 0;
+        #repo {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
         }
-        li {
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .file-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
             padding: 10px;
             border-bottom: 1px solid #ddd;
         }
-        a {
+        .file-item a {
             text-decoration: none;
             color: #007bff;
+            flex-grow: 1;
         }
-        a:hover {
+        .file-item a:hover {
             text-decoration: underline;
+        }
+        .file-icon {
+            margin-right: 10px;
         }
         pre {
             background-color: #f4f4f4;
             padding: 10px;
             border-radius: 5px;
             overflow-x: auto;
+            text-align: left;
         }
     </style>
 </head>
 <body>
     <h1>Explorador de Repositorio</h1>
-    <input type="text" id="repo" placeholder="Usuario/Repositorio" value="octocat/Hello-World">
-    <button onclick="loadRepo()">Cargar</button>
-    <ul id="file-list"></ul>
-    <div id="file-content"></div>
+    <div class="container">
+        <input type="text" id="repo" placeholder="Usuario/Repositorio" value="octocat/Hello-World">
+        <button onclick="loadRepo()">Cargar</button>
+        <div id="file-list"></div>
+        <div id="file-content"></div>
+    </div>
     
     <script>
         async function loadRepo(path = 'main') {
@@ -47,14 +69,18 @@
             const url = `https://api.github.com/repos/${repo}/contents/${path}`;
             const response = await fetch(url);
             if (!response.ok) {
-                document.getElementById('file-list').innerHTML = '<li>Error al cargar el repositorio.</li>';
+                document.getElementById('file-list').innerHTML = '<p>Error al cargar el repositorio.</p>';
                 return;
             }
             const data = await response.json();
             const fileList = document.getElementById('file-list');
             fileList.innerHTML = '';
             data.forEach(item => {
-                const li = document.createElement('li');
+                const div = document.createElement('div');
+                div.className = 'file-item';
+                const icon = document.createElement('span');
+                icon.className = 'file-icon';
+                icon.textContent = item.type === 'dir' ? '📁' : '📄';
                 const link = document.createElement('a');
                 link.href = '#';
                 link.textContent = item.name;
@@ -63,8 +89,9 @@
                 } else {
                     link.onclick = () => { loadFile(item.download_url); return false; };
                 }
-                li.appendChild(link);
-                fileList.appendChild(li);
+                div.appendChild(icon);
+                div.appendChild(link);
+                fileList.appendChild(div);
             });
         }
 
@@ -80,4 +107,3 @@
     </script>
 </body>
 </html>
-
