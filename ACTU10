@@ -1,0 +1,39 @@
+// Validar un correo electrónico
+function validarCorreo(email) {
+    let regex = /^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email) ? "Correo válido" : "Correo inválido";
+}
+console.log(validarCorreo("correo@example.com"));
+
+// Validar un número de teléfono de 10 dígitos
+function validarTelefono(numero) {
+    let regex = /^\d{10}$/;
+    return regex.test(numero) ? "Teléfono válido" : "Teléfono inválido";
+}
+console.log(validarTelefono("1234567890"));
+
+// Contar la cantidad de veces que aparece una palabra en una frase
+function contarPalabra(frase, palabra) {
+    let regex = new RegExp(`\\b${palabra}\\b`, "gi");
+    return (frase.match(regex) || []).length;
+}
+console.log(contarPalabra("Este es un ejemplo de texto con ejemplo de palabra repetida", "ejemplo"));
+
+// Reemplazar un conjunto de caracteres dentro de una frase
+function reemplazarTexto(frase) {
+    return frase.replace(/ipsum/g, "dolor");
+}
+console.log(reemplazarTexto("Lorem ipsum dolor sit amet, consectetur adipiscing elit"));
+
+// Validar una contraseña (mínimo una mayúscula, una minúscula y un número)
+function validarContrasena(contrasena) {
+    let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/;
+    return regex.test(contrasena) ? "Contraseña válida" : "Contraseña inválida";
+}
+console.log(validarContrasena("Password123"));
+
+// Extraer números de una cadena
+function extraerNumeros(texto) {
+    return texto.match(/\d+/g) || [];
+}
+console.log(extraerNumeros("Hay 3 perros y 7 gatos en la casa 45"));
