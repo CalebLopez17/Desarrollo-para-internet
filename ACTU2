@@ -1,0 +1,129 @@
+<!-- Empresa Pepe y Toño -->
+<p>
+    La empresa <b>Pepe y Toño</b> ha crecido considerablemente en los últimos años. Su <i>modelo</i> de negocio se basa en la calidad y el compromiso con sus clientes. <b>Pepe y Toño</b> han sabido adaptarse a las necesidades del mercado. Gracias a su enfoque, han logrado expandirse a nivel nacional. Este <i>negocio</i> representa una gran oportunidad para emprendedores.
+</p>
+
+<!-- Empresa Aracely -->
+<h1 style="font-size: 36px; color: red;">Empresa Aracely</h1>
+
+<!-- Empresa Home-Amazing -->
+<p style="font-size: 18px; line-height: 1.5;">
+    La empresa Home-Amazing ofrece soluciones innovadoras para el hogar. Sus productos están diseñados con tecnología de punta. Cada artículo es sometido a estrictas pruebas de calidad. La satisfacción del cliente es su prioridad. Gracias a esto, se han consolidado en el mercado.
+</p>
+
+<!-- Empresa Choquitos -->
+<h1 style="color: blue;">Acerca de Nosotros</h1>
+<h2 style="color: green;">Nuestros Servicios</h2>
+<h3 style="color: orange;">Llámanos</h3>
+
+<!-- Empresa Raptors-Dev -->
+<h1>
+    <a href="https://www.ejemplo.com">Nuevo Producto de Raptors-Dev</a>
+</h1>
+
+<!-- Empresa de limpieza Arácnidos -->
+<p style="text-align: right;">
+    "Las arañas pertenecen a la clase <i>Arachnida</i> y son artrópodos que juegan un papel crucial en el ecosistema."
+</p>
+
+<!-- Empresa Tubos y Aceros -->
+<p>
+    <img src="imagen.jpg" style="border: 1px solid black;" alt="Imagen representativa">
+</p>
+
+<!-- Empresa de Vasos Artesanales -->
+<ul>
+    <li>Materiales ecológicos</li>
+    <li>Diseños únicos</li>
+    <li>Mayor durabilidad</li>
+    <li>Respetuosos con el medio ambiente</li>
+    <li>No generan residuos plásticos</li>
+    <li>Hechos a mano</li>
+    <li>Resistentes a temperaturas altas</li>
+    <li>Personalizables</li>
+    <li>Alternativa sostenible</li>
+    <li>Variedad de modelos</li>
+    <li>Innovadores en diseño</li>
+    <li>Fabricación responsable</li>
+    <li>Productos exclusivos</li>
+    <li>Amigables con la salud</li>
+    <li>Menos impacto ambiental</li>
+</ul>
+
+<!-- Diseñador - Ventajas de los ecosistemas -->
+<ol>
+    <li>Regulan el clima</li>
+    <li>Proveen oxígeno</li>
+    <li>Mantienen la biodiversidad</li>
+    <li>Filtran el agua</li>
+    <li>Sostienen cadenas alimenticias</li>
+    <li>Fomentan la polinización</li>
+    <li>Generan suelo fértil</li>
+    <li>Brindan recursos naturales</li>
+    <li>Albergan vida silvestre</li>
+    <li>Regulan ciclos biogeoquímicos</li>
+    <li>Mitigan desastres naturales</li>
+    <li>Contribuyen a la economía</li>
+    <li>Proporcionan áreas recreativas</li>
+    <li>Son fuente de inspiración</li>
+    <li>Permiten el equilibrio natural</li>
+</ol>
+
+<!-- DevOps - Tabla sobre tecnologías de programación -->
+<table style="border: 1px solid gray;">
+    <tr>
+        <th>Ventajas</th>
+        <th>Desventajas</th>
+        <th>Tecnología</th>
+    </tr>
+    <tr>
+        <td>Alto rendimiento</td>
+        <td>Curva de aprendizaje alta</td>
+        <td>C++</td>
+    </tr>
+    <tr>
+        <td>Fácil de aprender</td>
+        <td>Menos eficiente</td>
+        <td>Python</td>
+    </tr>
+    <tr>
+        <td>Escalabilidad</td>
+        <td>Mayor consumo de recursos</td>
+        <td>Java</td>
+    </tr>
+    <tr>
+        <td>Rápida ejecución</td>
+        <td>Menos portable</td>
+        <td>Rust</td>
+    </tr>
+    <tr>
+        <td>Comunidad amplia</td>
+        <td>Menos optimizado</td>
+        <td>JavaScript</td>
+    </tr>
+    <tr>
+        <td>Modularidad</td>
+        <td>Mayor complejidad</td>
+        <td>Go</td>
+    </tr>
+    <tr>
+        <td>Integración con bases de datos</td>
+        <td>Más lento</td>
+        <td>PHP</td>
+    </tr>
+    <tr>
+        <td>Plataforma robusta</td>
+        <td>Requiere servidores potentes</td>
+        <td>.NET</td>
+    </tr>
+    <tr>
+        <td>Multiplataforma</td>
+        <td>Curva de aprendizaje alta</td>
+        <td>Swift</td>
+    </tr>
+    <tr>
+        <td>Flexibilidad</td>
+        <td>Menos seguridad</td>
+        <td>Ruby</td>
+    </tr>
+</table>
