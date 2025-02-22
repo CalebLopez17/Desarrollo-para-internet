@@ -1,0 +1,72 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Imagen en HTML</title>
+</head>
+<body>
+    <img src="imagen.jpg" alt="Descripción de la imagen">
+</body>
+</html>
+
+<!-- map_image.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapa de Imagen</title>
+</head>
+<body>
+    <img src="mapa.jpg" usemap="#mapa">
+    <map name="mapa">
+        <area shape="rect" coords="34,44,270,350" href="pagina1.html" alt="Sección 1">
+        <area shape="circle" coords="337,300,44" href="pagina2.html" alt="Sección 2">
+    </map>
+</body>
+</html>
+
+<!-- recor_image.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajuste de Imagen</title>
+</head>
+<body>
+    <img src="imagen.jpg" width="300" height="200" alt="Imagen redimensionada">
+</body>
+</html>
+
+<!-- legacy.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Imagen con Leyenda</title>
+</head>
+<body>
+    <figure>
+        <img src="imagen.jpg" alt="Imagen con leyenda">
+        <figcaption>Imagen 1. Titulo. Fuente: Creación propia</figcaption>
+    </figure>
+</body>
+</html>
+
+<!-- efec_mouse.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Efecto Hover en Imagen</title>
+    <style>
+        img:hover {
+            opacity: 0.5;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <img src="imagen.jpg" alt="Imagen con efecto hover">
+</body>
+</html>
