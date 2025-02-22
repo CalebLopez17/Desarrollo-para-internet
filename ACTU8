@@ -1,0 +1,41 @@
+// 1. Crear un objeto persona y mostrarlo en el navegador
+let persona = {
+    nombre: "Juan Pérez",
+    edad: 30,
+    correoElectronico: "juan.perez@example.com"
+};
+console.log(persona);
+document.write(`<pre>${JSON.stringify(persona, null, 2)}</pre>`);
+
+// 2. Crear una cadena con nombre y apellidos y mostrarla
+let nombreCompleto = "Carlos García López";
+console.log(nombreCompleto);
+document.write(`<p>${nombreCompleto}</p>`);
+
+// 3. Crear un objeto mascota y mostrarlo en el navegador
+let mascota = {
+    nombre: "Firulais",
+    edad: 5,
+    tipo: "Perro"
+};
+console.log(mascota);
+document.write(`<pre>${JSON.stringify(mascota, null, 2)}</pre>`);
+
+// 4. Concatenar "Hola" y "Mundo" con un espacio
+let saludo = "Hola" + " " + "Mundo";
+console.log(saludo);
+document.write(`<p>${saludo}</p>`);
+
+// 5. Crear un objeto libro y mostrarlo en el navegador
+let libro = {
+    titulo: "El Principito",
+    autor: "Antoine de Saint-Exupéry",
+    fechaPublicacion: "1943"
+};
+console.log(libro);
+document.write(`<pre>${JSON.stringify(libro, null, 2)}</pre>`);
+
+// 6. Obtener la fecha actual y mostrarla
+let fechaActual = new Date();
+console.log(fechaActual);
+document.write(`<p>Fecha actual: ${fechaActual}</p>`);
